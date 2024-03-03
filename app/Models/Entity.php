@@ -9,6 +9,8 @@ class Entity extends Model
 {
     use HasFactory;
 
+    protected $table = 'entities';
+
     protected $fillable = [
         'api', 'description', 'link', 'category_id'
     ];
