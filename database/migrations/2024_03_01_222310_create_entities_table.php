@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('api');
             $table->text('description');
             $table->string('link');
-            $table->foreignId('category_id')->nullable()->references('id')->on('categories')->nullOnDelete();
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null');
             $table->timestamps();
         });
     }
