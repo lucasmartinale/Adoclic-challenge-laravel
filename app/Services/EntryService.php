@@ -8,7 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Http;
 
-final class EntryService
+class EntryService
 {
 
     public function collectEntries(): bool
